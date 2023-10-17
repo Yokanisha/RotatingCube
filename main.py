@@ -15,8 +15,9 @@ circle_pos = [WIDTH/2, HEIGHT/2, 0]
 
 angle = 0
 
-points = []
 
+"""
+points = []
 points.append(np.matrix([-1, -1, 1])) #form (1, 3) (row, column)
 points.append(np.matrix([1, -1, 1])) # for calculating we need in form of [[1], [-1], [1]]. We will use the fct reshape
 points.append(np.matrix([1, 1, 1]))
@@ -25,6 +26,19 @@ points.append(np.matrix([-1, -1, -1]))
 points.append(np.matrix([1, -1, -1]))
 points.append(np.matrix([1, 1, -1]))
 points.append(np.matrix([-1, 1, -1]))
+"""
+
+arr = np.array([-1, -1, 1,
+                1, -1, 1,
+                1, 1, 1,
+                -1, 1, 1,
+                -1, -1, -1,
+                1, -1, -1,
+                1, 1, -1,
+                -1, 1, -1
+                ])
+
+points = arr.reshape(8, 3)
 
 projection_matrix = np.matrix([
     [1, 0, 0],
