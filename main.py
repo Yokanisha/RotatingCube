@@ -5,6 +5,7 @@ import math
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 BLACK = (0, 0, 0)
+GREY = (128, 128, 128)
 
 WIDTH, HEIGHT = 800, 600
 pygame.display.set_caption("3D projection in pygame!")
@@ -102,7 +103,7 @@ while True:
         y = int(projected2d[1][0] * scale) + circle_pos[1]
 
         projected_points[i] = [x, y]
-        pygame.draw.circle(screen, RED, (x, y), 5)
+        pygame.draw.circle(screen, GREY, (x, y), 5)
         i += 1
 
     #lines
